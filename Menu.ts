@@ -1,22 +1,59 @@
 import readlinesync = require("readline-sync");
 import { Conta } from "./src/model/Conta";
+import { ContaCorrente } from "./src/model/ContaCorrente";
+import { ContaPoupanca } from "./src/model/ContaPoupanca";
 
 export function main(){
 
     let opcao: number;
 
     //Cria novas instâncias (objetos) da classe conta
-    const c1 = new Conta(1, 123, 1, "Jonas", 100000)
-    c1.visualizar();
+    //const c1 = new Conta(1, 123, 1, "Jonas", 100000)
+    //c1.visualizar();
     //saque
-    console.log(c1.sacar(200000.00));
-    c1.visualizar();
+    //console.log(c1.sacar(200000.00));
+    //c1.visualizar();
 
-    const c2 = new Conta(2, 123, 2, "Aline", 200000)
-    c2.visualizar();
+    //const c2 = new Conta(2, 123, 2, "Aline", 200000)
+    //c2.visualizar();
     //depósito
-    c2.depositar(100.00)
-    c2.visualizar();
+    //c2.depositar(100.00)
+    //c2.visualizar();
+    
+
+    //Contas Correntes
+
+    //const cc1 = new ContaCorrente(3, 789, 1, "Andressa", 100000, 1000)
+    
+    //saque na conta corrente
+    //cc1.sacar(100500);
+    //cc1.visualizar();
+    
+    //deposito na conta corrente
+    //cc1.depositar(2000);
+    //cc1.visualizar();
+
+    const conta: Conta = new Conta(1, 123, 1, "Adriana", 10000);
+conta.visualizar();
+conta.sacar(10500);
+conta.visualizar();
+conta.depositar(5000);
+conta.visualizar();
+
+const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Mariana", 15000, 1000);
+contacorrente.visualizar();
+contacorrente.sacar(2000);
+contacorrente.visualizar();
+contacorrente.depositar(1000);
+contacorrente.visualizar();
+
+const contapoupanca: ContaPoupanca = new ContaPoupanca(3, 123, 2, "Victor", 1000, 10);
+contapoupanca.visualizar();
+contapoupanca.sacar(200);
+contapoupanca.visualizar();
+contapoupanca.depositar(1000);
+contapoupanca.visualizar();
+
 
     while(true){
 
