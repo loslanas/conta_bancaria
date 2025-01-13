@@ -10,7 +10,7 @@ export function main(){
     let titular: string;
     const tipoContas = ['Conta Corrente', "Conta Poupanca"];
 
-    //Criano um objeto da classe contacontroller
+    //Criando um objeto da classe contacontroller
     const contas = new ContaController();
 
     //Novas Instâncias da Classe ContaCorrente (Objetos)
@@ -67,7 +67,7 @@ export function main(){
         console.log("            6 - Sacar                               ");
         console.log("            7 - Depositar                           ");
         console.log("            8 - Transferir valores entre Contas     ");
-        console.log("            9 - Sair                                ");
+        console.log("            0 - Sair                                ");
         console.log("                                                    ");
         console.log("****************************************************");
         console.log("                                                    ");
